@@ -1,0 +1,130 @@
+  # =========================
+  # Ultra-large / petascale
+  # =========================
+sources:
+  - id: microns
+    label: MICrONS (connectomics; EM + functional)
+    kind: static
+    dataset_count: null
+    total_tb: 1600.0
+    notes: "Petabyte-scale wiring diagram + data (reported as 1.6 PB)."
+    provenance_url: "https://www.eurekalert.org/news-releases/1079296"
+    citation: "EurekAlert/Allen Institute press release: MICrONS data are 1.6 petabytes."
+sources:
+  - id: sra
+    label: NCBI Sequence Read Archive (SRA) – neuroscience subset lives here
+    kind: static
+    dataset_count: 9000000
+    total_tb: 36000.0
+    notes: "Massive sequencing archive (not neuroscience-only). Store neuroscience genomics here (scRNA-seq, etc.)."
+    provenance_url: "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-20-108.html"
+    citation: "NIH notice: SRA contains more than 36 PB of data; also described as ~9 million records."
+sources:
+  - id: em_human_brain_science_2024
+    label: Human brain EM reconstruction (NIH-funded, Science 2024)
+    kind: static
+    dataset_count: 1
+    total_tb: 1400.0
+    notes: "Example of a single modern EM dataset reaching ~PB scale (demonstrates why connectomics dominates storage)."
+    provenance_url: "https://www.nih.gov/news-events/nih-research-matters/study-reveals-unseen-details-human-brain-structure"
+    citation: "NIH Research Matters: dataset yielded about 1.4 petabytes of data."
+
+  # =========================
+  # Population neuroimaging
+  # =========================
+sources:
+  - id: uk_biobank_imaging
+    label: UK Biobank Imaging (brain included)
+    kind: static
+    dataset_count: 100000
+    total_tb: null
+    notes: "100,000 imaging participants milestone; storage size not stated as one simple public number."
+    provenance_url: "https://www.ukbiobank.ac.uk/discoveries-and-impact/major-achievements/the-worlds-largest-imaging-project-reaches-milestone-of-100000-scans/"
+    citation: "UK Biobank: imaging project reached 100,000 scans milestone."
+
+  # =========================
+  # Human Connectome (lifespan)
+  # =========================
+sources:
+  - id: hcp_lifespan
+    label: Lifespan Human Connectome (Aging + Development releases)
+    kind: static
+    dataset_count: 1377
+    total_tb: 22.0
+    notes: "Release 2.0 mentions 22+ TB per project; participants in release: 725 (Aging) + 652 (Development)."
+    provenance_url: "https://www.humanconnectome.org/study/hcp-lifespan-aging/article/lifespan-20-release-hcp-aging-hcp-development-data"
+    citation: "HCP site: Lifespan 2.0 includes 725 Aging + 652 Development participants and '22+ TB of data/project'."
+
+  # =========================
+  # Allen Institute (more than BICCN)
+  # =========================
+sources:
+  - id: allen_institute_biccn
+    label: Allen Institute (BICCN imaging headline)
+    kind: static
+    dataset_count: null
+    total_tb: 650.0
+    notes: "Headline storage number on Allen Brain Map."
+    provenance_url: "https://brain-map.org/"
+    citation: "Allen Brain Map: '650 terabytes of high-resolution 3D imaging data'."
+
+  - id: allen_institute_gene_points
+    label: Allen Institute (gene expression points headline)
+    kind: static
+    dataset_count: null
+    total_tb: null
+    notes: "Allen also reports '700 billion gene expression data points' (a scale metric not easily converted to TB)."
+    provenance_url: "https://brain-map.org/"
+    citation: "Allen Brain Map: '700 billion gene expression data points' headline."
+
+  # =========================
+  # European infrastructure
+  # =========================
+sources:
+  - id: ebrains_kg
+    label: EBRAINS Knowledge Graph
+    kind: static
+    dataset_count: 854
+    total_tb: null
+    notes: "Count reflects datasets registered/curated in KG (not total storage)."
+    provenance_url: "https://ec.europa.eu/research/participants/documents/downloadPublic?appId=PPGMS&documentIds=080166e5dc63b419"
+    citation: "EU document: EBRAINS Knowledge Graph listed 854 datasets (plus models/software counts)."
+
+  # =========================
+  # Genomics (neuroscience uses subsets heavily)
+  # =========================
+sources:
+  - id: geo
+    label: NCBI GEO (Gene Expression Omnibus) – neuro studies are a large subset
+    kind: static
+    dataset_count: 200000
+    total_tb: null
+    notes: "GEO is cross-domain; 'studies' is the clean count metric for scale comparisons."
+    provenance_url: "https://academic.oup.com/nar/article/52/D1/D138/7337616"
+    citation: "NAR 2024: GEO contains over 200,000 studies (and millions of samples)."
+
+  # =========================
+  # Historical predecessor to OpenNeuro
+  # =========================
+sources:
+  - id: openfmri
+    label: OpenfMRI (deprecated; predecessor to OpenNeuro)
+    kind: static
+    dataset_count: 95
+    total_tb: null
+    notes: "Deprecated; included for historical continuity and comparison."
+    provenance_url: "https://openfmri.org/"
+    citation: "OpenfMRI homepage: 95 available datasets."
+
+  # =========================
+  # Meta-registry / discovery layer
+  # =========================
+sources:
+  - id: nif_registry
+    label: Neuroscience Information Framework (NIF) Registry
+    kind: static
+    dataset_count: 2500
+    total_tb: null
+    notes: "Registry count is a discovery metric; this number is historical and not a storage total."
+    provenance_url: "https://www.lsuhsc.edu/library/news/?p=1562"
+    citation: "NIF registry described as 'over 2500 resources' (historic reference)."
