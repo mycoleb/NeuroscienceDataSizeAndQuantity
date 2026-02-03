@@ -2,6 +2,10 @@ import os
 import pandas as pd
 import numpy as np
 
+def bilingual(en: str, fr: str) -> str:
+    """Stacked English / French text for titles & labels."""
+    return f"{en}\n{fr}"
+
 # Create directory structure
 os.makedirs('data', exist_ok=True)
 os.makedirs('outputs', exist_ok=True)
@@ -65,9 +69,22 @@ def plot_largest_by_size_v2(df):
     colors = plt.cm.viridis(np.linspace(0.3, 0.8, len(d)))
     bars = ax.barh(wrap_labels(d['label']), d['total_tb'], color=colors, edgecolor='white', height=0.7)
     
-    ax.set_xlabel("Storage Volume (Terabytes)", fontsize=12)
-    ax.set_title("The Titans of Neuroscience Data (2026)", pad=20)
-    
+    ax.set_xlabel(
+    bilingual(
+        "Storage Volume (Terabytes)",
+        "Volume de stockage (téraoctets)"
+    ),
+    fontsize=12
+    )
+
+    ax.set_title(
+        bilingual(
+            "The Titans of Neuroscience Data (2026)",
+            "Les géants des données en neurosciences (2026)"
+        ),
+        pad=20
+    )
+
     # Add values on bars
     for bar in bars:
         width = bar.get_width()
@@ -99,8 +116,15 @@ def plot_modality_pie(df):
     fig.gca().add_artist(centre_circle)
     
     plt.setp(autotexts, size=9, weight="bold", color="black")
-    ax.set_title("Neuroscience Data Landscape by Modality\n(Share of Total TB)", fontsize=14, pad=10)
-    
+    ax.set_title(
+        bilingual(
+            "Neuroscience Data Landscape by Modality\n(Share of Total TB)",
+            "Panorama des données en neurosciences par modalité\n(Part du volume total en To)"
+        ),
+        fontsize=14,
+        pad=10
+)
+
     plt.tight_layout()
     plt.savefig('outputs/modality_distribution_pie.png')
 
@@ -121,10 +145,30 @@ def plot_count_vs_size_bubble(df):
     
     ax.set_xscale('log')
     ax.set_yscale('log')
-    ax.set_xlabel("Number of Datasets / Items (Log Scale)", fontsize=12)
-    ax.set_ylabel("Total Size in TB (Log Scale)", fontsize=12)
-    ax.set_title("Repository Scale: Count vs. Volume", pad=20)
-    
+    ax.set_xlabel(
+        bilingual(
+            "Number of Datasets / Items (Log Scale)",
+            "Nombre de jeux de données / éléments (échelle logarithmique)"
+        ),
+        fontsize=12
+    )
+
+    ax.set_ylabel(
+        bilingual(
+            "Total Size in TB (Log Scale)",
+            "Taille totale en To (échelle logarithmique)"
+        ),
+        fontsize=12
+    )
+
+    ax.set_title(
+        bilingual(
+            "Repository Scale: Count vs. Volume",
+            "Échelle des dépôts : nombre vs volume"
+        ),
+        pad=20
+    )
+
     for i, txt in enumerate(df['label']):
         ax.annotate(txt, (df['dataset_count'][i], df['total_tb'][i]), 
                     xytext=(5,5), textcoords='offset points', fontsize=9)
