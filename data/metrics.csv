@@ -1,2 +1,9 @@
-timestamp_utc,source_id,label,dataset_count,total_gb,total_tb,notes,provenance_url,citation,fetch_status
-2026-01-15T04:24:33Z,nif_registry,Neuroscience Information Framework (NIF) Registry,2500,,,Registry count is a discovery metric; this number is historical and not a storage total.,https://www.lsuhsc.edu/library/news/?p=1562,NIF registry described as 'over 2500 resources' (historic reference).,ok
+label,total_tb,dataset_count,modality,species
+DANDI Archive,893.0,1023,Electrophysiology,Multiple
+Allen Institute (BKP),500.0,50,Microscopy/Imaging,Human/Mouse
+OpenNeuro,85.0,1100,MRI/fMRI,Human
+Human Connectome Project (HCP),62.0,1200,MRI/fMRI,Human
+NeuroMorpho.org,0.5,260078,Morphology,Multiple
+EBRAINS (Human Brain Project),45.0,200,Multi-modal,Human/Rat
+CRCNS,12.0,150,Electrophysiology,Multiple
+Mouse Light (Janelia),150.0,40,Microscopy/Imaging,Mouse
